@@ -15,6 +15,8 @@ VyOSのconfigで設定できないことを無理やりやっているので、�
 
 流れとしては、isoをビルドする環境でeoipをmakeしてから、それをVyOS側に移し、make installする。
 ### isoをビルドできる環境で作業する
+isoをビルドする環境は、dockerで割と簡単に用意できます。
+https://docs.vyos.io/en/latest/contributing/build-vyos.html
 ```
 git clone https://github.com/symysak/eoip
 cd eoip/
@@ -23,6 +25,7 @@ cd ..
 zip -r eoip-files eoip/
 ```
 ### VyOSで作業する
+先ほどのeoip-files.zipをscpなどでVyOS側に移した後、下記コマンドを実行してください。
 ```
 unzip eoip-files.zip
 cd eoip
