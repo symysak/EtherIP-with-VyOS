@@ -8,8 +8,8 @@ VyOS 1.4
 EtherIP(RFC3378)
 ## 使用するもの
 https://github.com/symysak/eoip
-※fork元
-https://github.com/Nat-Lab/eoip
+
+※fork元https://github.com/Nat-Lab/eoip
 ## 設定
 VyOSのconfigで設定できないことを無理やりやっているので、結構お行儀が悪いです。自己責任で行ってください。
 
@@ -44,3 +44,6 @@ sudo eoip -6 tap1 remote <remote ip addr> local <local ip addr> &
 :wq
 ```
 configure内ではtap1は設定に使用できないので、先ほどの/config/scripts/vyos-postconfig-bootup.scriptに、tap1をbr0のメンバーに入れる設定等を書いて、configureではbr0として使用するといい感じになると思います。
+
+## 感謝!
+https://github.com/Nat-Lab/eoip
